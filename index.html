@@ -1,173 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="sE2CcYAKkulRsffd6zLMqeDLKBEH5qiIpUD918nhahc" />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lozora - Home & Kitchen, Jewellery & Fashion</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+<meta name="google-site-verification" content="sE2CcYAKkulRsffd6zLMqeDLKBEH5qiIpUD918nhahc" />
 
-    body {
-      background: #f7f7f7;
-      color: #222;
-    }
+<title>Lozora - Shop Online</title>
 
-    header {
-      background: #111;
-      color: white;
-      padding: 18px 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial,sans-serif;
+}
 
-    .logo {
-      font-size: 28px;
-      font-weight: bold;
-    }
+body{
+  background:#f6f6f6;
+  color:#222;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-    }
+header{
+  background:#111;
+  color:white;
+  padding:18px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
 
-    .hero {
-      background: white;
-      text-align: center;
-      padding: 60px 20px;
-    }
+.logo{
+  font-size:28px;
+  font-weight:bold;
+  letter-spacing:2px;
+}
 
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+}
 
-    .hero p {
-      font-size: 18px;
-      color: #666;
-      margin-bottom: 25px;
-    }
+.hero{
+  background:white;
+  text-align:center;
+  padding:65px 20px;
+}
 
-    .btn {
-      display: inline-block;
-      background: #111;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 6px;
-      text-decoration: none;
-    }
+.hero h1{
+  font-size:42px;
+  margin-bottom:12px;
+}
 
-    .categories {
-      padding: 40px 5%;
-    }
+.hero p{
+  color:#666;
+  font-size:18px;
+  margin-bottom:25px;
+}
 
-    .categories h2,
-    .products h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 30px;
-    }
+.shop-btn{
+  background:#111;
+  color:white;
+  text-decoration:none;
+  padding:13px 28px;
+  border-radius:6px;
+  display:inline-block;
+}
 
-    .category-box {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
+section{
+  padding:45px 6%;
+}
 
-    .category {
-      background: white;
-      padding: 35px 20px;
-      text-align: center;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      font-size: 22px;
-      font-weight: bold;
-    }
+h2{
+  text-align:center;
+  margin-bottom:30px;
+}
 
-    .products {
-      padding: 20px 5% 50px;
-    }
+.categories{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
 
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
+.category{
+  background:white;
+  padding:35px 15px;
+  text-align:center;
+  border-radius:12px;
+  font-size:21px;
+  font-weight:bold;
+  box-shadow:0 2px 10px #ddd;
+}
 
-    .product {
-      background: white;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    }
+.products{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
 
-    .product img {
-      width: 100%;
-      height: 200px;
-      object-fit: contain;
-      border-radius: 8px;
-    }
+.product{
+  background:white;
+  border-radius:12px;
+  padding:15px;
+  box-shadow:0 2px 10px #ddd;
+}
 
-    .product h3 {
-      margin: 12px 0 8px;
-    }
+.product img{
+  width:100%;
+  height:210px;
+  object-fit:contain;
+  border-radius:8px;
+}
 
-    .price {
-      font-weight: bold;
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
+.product h3{
+  margin:12px 0 8px;
+}
 
-    .buy {
-      display: block;
-      text-align: center;
-      background: #111;
-      color: white;
-      padding: 10px;
-      border-radius: 5px;
-      text-decoration: none;
-    }
+.price{
+  font-size:20px;
+  font-weight:bold;
+  margin-bottom:12px;
+}
 
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 25px;
-      margin-top: 30px;
-    }
+.buy{
+  display:block;
+  text-align:center;
+  background:#111;
+  color:white;
+  text-decoration:none;
+  padding:11px;
+  border-radius:6px;
+}
 
-    @media (max-width: 800px) {
-      .category-box {
-        grid-template-columns: 1fr;
-      }
+footer{
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:25px;
+}
 
-      .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+@media(max-width:800px){
+  .categories{
+    grid-template-columns:1fr;
+  }
 
-      .hero h1 {
-        font-size: 32px;
-      }
-    }
+  .products{
+    grid-template-columns:repeat(2,1fr);
+  }
 
-    @media (max-width: 500px) {
-      .product-grid {
-        grid-template-columns: 1fr;
-      }
+  .hero h1{
+    font-size:34px;
+  }
+}
 
-      nav {
-        display: none;
-      }
-    }
-  </style>
+@media(max-width:500px){
+  nav{
+    display:none;
+  }
+
+  .products{
+    grid-template-columns:1fr;
+  }
+}
+</style>
 </head>
 
 <body>
@@ -182,60 +181,60 @@
   </nav>
 </header>
 
-<section class="hero">
+<div class="hero">
   <h1>Welcome to Lozora</h1>
   <p>Fashion • Jewellery • Home & Kitchen</p>
-  <a href="#products" class="btn">Shop Now</a>
-</section>
+  <a href="#products" class="shop-btn">Shop Now</a>
+</div>
 
-<section class="categories" id="categories">
-  <h2>Our Categories</h2>
+<section id="categories">
+  <h2>Shop by Category</h2>
 
-  <div class="category-box">
+  <div class="categories">
     <div class="category">👗 Fashion</div>
     <div class="category">💎 Jewellery</div>
     <div class="category">🏠 Home & Kitchen</div>
   </div>
 </section>
 
-<section class="products" id="products">
+<section id="products">
   <h2>Featured Products</h2>
 
-  <div class="product-grid">
+  <div class="products">
 
     <div class="product">
-      <img src="https://via.placeholder.com/400x300?text=Product+1">
+      <img src="https://via.placeholder.com/400x300?text=Mini+Fan">
       <h3>Portable Mini Fan</h3>
       <div class="price">₹199</div>
-      <a href="#" class="buy">Buy Now</a>
+      <a class="buy" href="#">Buy Now</a>
     </div>
 
     <div class="product">
-      <img src="https://via.placeholder.com/400x300?text=Product+2">
+      <img src="https://via.placeholder.com/400x300?text=Kitchen">
       <h3>Kitchen Product</h3>
       <div class="price">₹249</div>
-      <a href="#" class="buy">Buy Now</a>
+      <a class="buy" href="#">Buy Now</a>
     </div>
 
     <div class="product">
-      <img src="https://via.placeholder.com/400x300?text=Product+3">
+      <img src="https://via.placeholder.com/400x300?text=Fashion">
       <h3>Fashion Item</h3>
       <div class="price">₹299</div>
-      <a href="#" class="buy">Buy Now</a>
+      <a class="buy" href="#">Buy Now</a>
     </div>
 
     <div class="product">
-      <img src="https://via.placeholder.com/400x300?text=Product+4">
+      <img src="https://via.placeholder.com/400x300?text=Jewellery">
       <h3>Jewellery</h3>
       <div class="price">₹149</div>
-      <a href="#" class="buy">Buy Now</a>
+      <a class="buy" href="#">Buy Now</a>
     </div>
 
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Lozora. All Rights Reserved.</p>
+  <p>© 2026 Lozora — All Rights Reserved</p>
 </footer>
 
 </body>
