@@ -3,92 +3,239 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lozora Store</title>
-
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <title>Lozora - Home & Kitchen, Jewellery & Fashion</title>
 
   <style>
-    body{font-family:Arial;margin:0;background:#f6f6f6;color:#222}
-    header{background:#111;color:white;padding:20px;text-align:center}
-    h1{margin:0}
-    .container{max-width:1000px;margin:auto;padding:20px}
-    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-    .card{background:white;border-radius:12px;padding:15px;box-shadow:0 2px 10px #ddd}
-    .card img{width:100%;height:200px;object-fit:cover;border-radius:10px}
-    .price{font-size:20px;font-weight:bold}
-    button{background:#111;color:white;border:0;padding:12px 18px;border-radius:8px;cursor:pointer}
-    .whatsapp{background:#25D366;margin-top:8px;width:100%}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f7f7f7;
+      color: #222;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      padding: 18px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .hero {
+      background: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #111;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .categories {
+      padding: 40px 5%;
+    }
+
+    .categories h2,
+    .products h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 30px;
+    }
+
+    .category-box {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .category {
+      background: white;
+      padding: 35px 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .products {
+      padding: 20px 5% 50px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .product {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .product h3 {
+      margin: 12px 0 8px;
+    }
+
+    .price {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .buy {
+      display: block;
+      text-align: center;
+      background: #111;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 800px) {
+      .category-box {
+        grid-template-columns: 1fr;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        display: none;
+      }
+    }
   </style>
 </head>
 
 <body>
 
 <header>
-  <h1>LOZORA</h1>
-  <p>Home & Kitchen • Jewellery • Clothing</p>
+  <div class="logo">LOZORA</div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#categories">Categories</a>
+    <a href="#products">Products</a>
+  </nav>
 </header>
 
-<div class="container">
-  <h2>Our Products</h2>
-  <div id="products" class="products">
-    Loading products...
+<section class="hero">
+  <h1>Welcome to Lozora</h1>
+  <p>Fashion • Jewellery • Home & Kitchen</p>
+  <a href="#products" class="btn">Shop Now</a>
+</section>
+
+<section class="categories" id="categories">
+  <h2>Our Categories</h2>
+
+  <div class="category-box">
+    <div class="category">👗 Fashion</div>
+    <div class="category">💎 Jewellery</div>
+    <div class="category">🏠 Home & Kitchen</div>
   </div>
-</div>
+</section>
 
-<script>
-const SUPABASE_URL = https://aaubsrshbmydpehxivak.supabase.co/rest/v1/
-const SUPABASE_KEY = sb_publishable_0lOXF45wVheQ53NLGXDT0Q_vMWZkS0F
+<section class="products" id="products">
+  <h2>Featured Products</h2>
 
-const supabaseClient = supabase.createClient(
-  SUPABASE_URL,
-  SUPABASE_KEY
-);
+  <div class="product-grid">
 
-async function loadProducts() {
-  const { data, error } = await supabaseClient
-    .from("products")
-    .select("*")
-    .order("id", { ascending: false });
-
-  const box = document.getElementById("products");
-
-  if (error) {
-    box.innerHTML = "<p>Products load nahi ho rahe.</p>";
-    console.log(error);
-    return;
-  }
-
-  if (!data || data.length === 0) {
-    box.innerHTML = "<p>Abhi koi product available nahi hai.</p>";
-    return;
-  }
-
-  box.innerHTML = data.map(product => `
-    <div class="card">
-      ${product.image_url ? `<img src="${product.image_url}" alt="${product.name}">` : ""}
-      <h3>${product.name || ""}</h3>
-      <p>${product.description || ""}</p>
-      <p class="price">₹${product.price || 0}</p>
-      <p>Category: ${product.category || ""}</p>
-      <button class="whatsapp"
-        onclick="orderProduct('${encodeURIComponent(product.name || "")}','${product.price || 0}')">
-        Order on WhatsApp
-      </button>
+    <div class="product">
+      <img src="https://via.placeholder.com/400x300?text=Product+1">
+      <h3>Portable Mini Fan</h3>
+      <div class="price">₹199</div>
+      <a href="#" class="buy">Buy Now</a>
     </div>
-  `).join("");
-}
 
-function orderProduct(name, price) {
-  const phone = "917905521349";
-  const message = `Hello Lozora, I want to order ${decodeURIComponent(name)} for ₹${price}.`;
-  window.open(
-    `https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
-    "_blank"
-  );
-}
+    <div class="product">
+      <img src="https://via.placeholder.com/400x300?text=Product+2">
+      <h3>Kitchen Product</h3>
+      <div class="price">₹249</div>
+      <a href="#" class="buy">Buy Now</a>
+    </div>
 
-loadProducts();
-</script>
+    <div class="product">
+      <img src="https://via.placeholder.com/400x300?text=Product+3">
+      <h3>Fashion Item</h3>
+      <div class="price">₹299</div>
+      <a href="#" class="buy">Buy Now</a>
+    </div>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/400x300?text=Product+4">
+      <h3>Jewellery</h3>
+      <div class="price">₹149</div>
+      <a href="#" class="buy">Buy Now</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Lozora. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
